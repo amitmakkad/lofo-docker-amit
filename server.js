@@ -8,7 +8,7 @@ require('dotenv').config()
 // const clientdir = url.fileURLToPath(new URL('.', 'client'))
 app.use(express.static(path.join('.','client','build')))
 
-//Connection to DB
+//Connection to Database
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("mongoDB connected...");
